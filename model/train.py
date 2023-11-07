@@ -7,7 +7,7 @@ import pandas as pd
 import pathlib
 
 # Cargar el conjunto de datos
-train_df = pd.read_csv(pathlib.Path('data/train.csv'))
+train_df = pd.read_csv(pathlib.Path('data/train25.csv'))
 
 train_df = train_df.drop(columns=['Id'])
 
@@ -18,7 +18,7 @@ y_train = train_df.pop('Bikes_Rented')
 X_train = train_df
 
 print('Training model..')
-clf = RandomForestClassifier(n_estimators=20, max_depth=10, random_state=0)
+clf = RandomForestClassifier(n_estimators=20, max_depth=15, random_state=0)
 clf.fit(X_train, y_train)
 
 print('Saving model..')
