@@ -18,7 +18,7 @@ y_train = train_df.pop('Bikes_Rented')
 X_train = train_df
 
 print('Training model..')
-clf = RandomForestClassifier(n_estimators=10, max_depth=2, random_state=0)
+clf = RandomForestClassifier(n_estimators=20, max_depth=10, random_state=0)
 clf.fit(X_train, y_train)
 
 print('Saving model..')
